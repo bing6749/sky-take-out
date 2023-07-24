@@ -59,7 +59,7 @@ public class AutoFillAspect {
         LocalDateTime now = LocalDateTime.now();
         Long currentId = BaseContext.getCurrentId();
 
-        if (value == OperationType.UPDATE){
+        if (value == OperationType.INSERT){
             try {
                 Method setCreateTime = entity.getClass().getDeclaredMethod(AutoFillConstant.SET_CREATE_TIME, LocalDateTime.class);
                 Method setCreateUser = entity.getClass().getDeclaredMethod(AutoFillConstant.SET_CREATE_USER, Long.class);
@@ -74,7 +74,7 @@ public class AutoFillAspect {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-        }else if (value == OperationType.INSERT) {
+        }else if (value == OperationType.UPDATE) {
             try {
                 Method setUpdateTime = entity.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_TIME, LocalDateTime.class);
                 Method setUpdateUser = entity.getClass().getDeclaredMethod(AutoFillConstant.SET_UPDATE_USER, Long.class);

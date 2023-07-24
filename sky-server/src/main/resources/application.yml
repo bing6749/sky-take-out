@@ -37,3 +37,10 @@ sky:
     admin-ttl: 72000000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+
+# 七牛云 配置
+qiniuyun:
+  accessKey: EgWJOo-144oVkEGua-A5j06LT8-vHCDHeVtA78Y6               #你的accessKey
+  secretKey: M1vqWmOHkl8nFmhXnpVfQ4tgKUWr68krW97YuOAF                #你的secretKey
+  bucket: sky-take-out-bing                  #你的空间名
+  domain: ryabmpz7y.hn-bkt.clouddn.com  #刚刚绑定的域名
