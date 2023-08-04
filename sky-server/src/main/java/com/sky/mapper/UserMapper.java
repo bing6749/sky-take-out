@@ -10,6 +10,8 @@ import com.sky.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.Map;
+
 /**
  * @author MaRui
  */
@@ -19,6 +21,6 @@ public interface UserMapper {
     @Select("select * from user where openid = #{openid}")
     User getByOpenId(String openid);
 
-
+    Integer countByMap(Map map);
     void insert(User user);
 }
